@@ -41,8 +41,8 @@ const cooperCanyonFalls = new Trail(
 )
 
 const switzerFalls = new Trail(
-  'Switzer Falls', {lat: 34.26659384655261, long: -118.14573470633138}, 3.7, 120, 695, 
-  ['waterfalls'], ['images/switzer-falls/switzer-falls.jpeg'], 'Medium', 'flat'
+  'Switzer Falls', {lat: 34.26659384655261, long: -118.14573470633138}, 3.7, 108, 695, 
+  ['waterfalls'], ['images/switzer-falls/switzer-falls.jpeg', 'images/switzer-falls/switzer-falls-2.webp', 'images/switzer-falls/switzer-falls-3.webp'], 'Medium', 'flat'
 )
 
 const trailCanyonFalls = new Trail(

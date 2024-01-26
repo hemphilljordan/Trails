@@ -112,16 +112,19 @@ function showMap(zipcode, trailArray, lat, long) {
         });
 
         marker.addListener('click', () => {
-          const stringifyTrailInfo = JSON.stringify(currMarker)
-          sessionStorage.setItem('trail', stringifyTrailInfo)
-          window.location.href = 'trail.html'
-        })
+          goToTrailPage(currMarker)})
       }
 
     })
     .catch(error => console.error('Error:', error));
 }
 
+
+function goToTrailPage(trail){
+  const stringifyTrailInfo = JSON.stringify(trail)
+  sessionStorage.setItem('trail', stringifyTrailInfo)
+  window.location.href = 'trail.html'
+}
 
 
 
@@ -167,7 +170,7 @@ function showFilteredTrails(array) {
     const trailDiv = document.createElement('div')
     trailDiv.innerHTML = `
     <div class="filter-result">
-    <img src="${trail.photo[0]}" alt="">
+    <img src="${trail.photo[0]}" alt="" class="the-image">
     <div class="trail-name">
     <h3>${trail.name}</h3><img src=images/location-icon.png onmouseover="showTrailOnMap(${trail.coordinates.lat}, ${trail.coordinates.long})">
     </div
@@ -175,6 +178,9 @@ function showFilteredTrails(array) {
     <p class="stats">${trail.length} mi    ${trail.difficulty}    ${trail.vibes[0]}    ${trail.ascend}</p>
   </div>
          `
+    trailDiv.querySelector('.the-image').addEventListener('click', () => {
+      goToTrailPage(trail)
+    })
     filterDiv.appendChild(trailDiv)
   })
 }
@@ -394,6 +400,66 @@ function filterTrails(){
     // All filters passed, include the trail in the result
     return true;
   });
+}
+
+// Function to calculate distance between two points using Haversine formula
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371; // Earth radius in kilometers
+
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLon = (lon2 - lon1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c;
+
+  return distance;
+}
+
+// Function to sort locations by distance
+function sortLocationsByDistance(locations, referenceLat, referenceLon) {
+  // Add a distance property to each location in the array
+  locations.forEach((location) => {
+    location.distance = calculateDistance(referenceLat, referenceLon, location.coordinates.lat, location.coordinates.lon);
+  });
+
+  // Sort the array based on the distance property
+  locations.sort((a, b) => a.distance - b.distance);
+
+  // Remove the temporary distance property from the sorted array
+  locations.forEach((location) => {
+    delete location.distance;
+  });
+
+  return locations;
+}
+
+
+
+async function getLatLongFromZipCode(zipCode) {
+  const apiKey = 'AIzaSyB28bmNkVX6s0hpsj2Zk6kKU_HXJ739ArQ'
+  const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=${apiKey}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    if (data.status === 'OK' && data.results.length > 0) {
+      const location = data.results[0].geometry.location;
+      const lat = location.lat;
+      const lng = location.lng;
+      
+     // console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+      return { lat: lat, lng: lng };
+    } else {
+      console.error('Unable to retrieve coordinates for the given zip code.');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching data from the Google Maps Geocoding API.', error);
+    return null;
+  }
 }
 
 

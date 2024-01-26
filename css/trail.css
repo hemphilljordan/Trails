@@ -281,4 +281,11 @@ body {
   .below-image iframe {
     width: 100vw;
   }
+  .front-image {
+    width: 100vw;
+    height: auto;
+  }
+  .blur {
+    height: 95vh;
+  }
 }

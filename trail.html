@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/trail.css">
+  <title>Trails</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="title">
+      <h1 onclick="toPage('index.html')">Happy Trails</h1>
+    </div>
+  </header>
+
+
+
+  <div class="main-image">
+    <img src="" alt="" id="main-pic">
+    <h1 id="trail-title"></h1>
+    <div class="bottom-pic-menu">
+      <div class="choice">
+        <div class="icon" id="photo">
+          <img src="images/camera.svg" alt="">
+        </div>
+        <p>Photos</p>
+      </div>
+      <div class="choice">
+        <div class="icon">
+          <img src="images/camera.svg" alt="">
+        </div>
+        <p>Directions</p>
+      </div>
+      <div class="choice">
+        <div class="icon">
+          <img src="images/camera.svg" alt="">
+        </div>
+        <p>PDF</p>
+      </div>
+      <div class="choice">
+        <div class="icon">
+          <img src="images/camera.svg" alt="">
+        </div>
+        <p>How Far?</p>
+      </div>
+      <div class="choice">
+        <div class="icon">
+          <img src="images/camera.svg" alt="">
+        </div>
+        <p>Share</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="below-image">
+    <div class="left-div">
+      <div class="stats">
+        <div class="stat-item">
+          <p>Length</p>
+          <strong id="trail-length"></strong>
+        </div>
+        <div class="stat-item">
+          <p>Avg. Time</p>
+          <strong id="trail-time"></strong>
+        </div>
+        <div class="stat-item">
+          <p>Elevation Gain</p>
+          <strong id="trail-elevation"></strong>
+        </div>
+        <div class="stat-item">
+          <p>Difficulty</p>
+          <strong id="trail-difficulty"></strong>
+        </div>
+      </div>
+      <div class="weather-div">
+        <p class="conditions">Conditions</p>
+        <div class="forecast">
+          <div class="day">
+            <p class="get-day"></p>
+            <p class="active day-num get-date" id="date1"></p>
+          </div>
+          <div class="day">
+            <p class="get-day"></p>
+            <p class="day-num get-date" id="date2"></p>
+          </div>
+          <div class="day">
+            <p class="get-day"></p>
+            <p class="day-num get-date" id="date3"></p>
+          </div>
+          <div class="day">
+            <p class="get-day"></p>
+            <p class="day-num get-date" id="date4"></p>
+          </div>
+          <div class="day">
+            <p class="get-day"></p>
+            <p class="day-num get-date" id="date5"></p>
+          </div>
+        </div>
+        <div>
+         <div class="temp-icon">
+          <h1 id="main-temp"></h1>
+         <img src="images/weather-icons/clear.png" alt="" id="weather-img">
+         <div>
+          <p id="weather-description"></p>
+          <p id="high-low">H:37 L:25</p>
+         </div>
+         </div>
+       
+        </div>
+      </div>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QVwKL_YzGlU?si=kct2dQxtT5xsr_Tv"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+
+
+  <div class="photo-screen">
+    <div class="photo-collection"></div>
+    <div class="close-x">
+      <svg width="800px" height="800px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+        </svg>
+     </div>
+ <div class="arrow-circle" id="next">
+  <img src="images/arrow.svg" alt="">
+ </div>
+ <div class="arrow-circle" id="previous">
+  <img src="images/arrow.svg" alt="">
+ </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <script src="js/all-trail-info.js"></script>
+  <script src="js/trail.js"></script>
+</body>
+
+</html>

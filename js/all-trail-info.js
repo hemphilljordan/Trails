@@ -106,7 +106,7 @@ const tahquitzCanyon = new Trail(
 )
 
 const tenajaFalls = new Trail(
-  'Tenaja Falls', {lat: 33.549396419185506, long: -117.3945231591763}, 1.6, 45, 321, ['waterfalls'], ['images/tenaja-falls/tenaja-falls.webp'], "Easy", 'flat'
+  'Tenaja Falls', {lat: 33.549396419185506, long: -117.3945231591763}, 1.6, 45, 321, ['waterfalls'], ['images/tenaja-falls/tenaja-falls.jpeg', 'images/tenaja-falls/tenaja-falls-2.webp'], "Easy", 'flat'
 )
 
 const ortegaFalls = new Trail(

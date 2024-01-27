@@ -1,13 +1,16 @@
 
 
+// Shows original search/map when going back from trail page.
+// maybe i should just make the search and main page different pages?
 
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById('map'), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 8,
-//     mapId: 'e43141e055b7df38'
-//   })
-// }
+const getTrail = sessionStorage.getItem('sortedTrails')
+if(getTrail){
+  const retrievedSortedTrailsJSON = sessionStorage.getItem('sortedTrails');
+  const retrievedSortedTrails = JSON.parse(retrievedSortedTrailsJSON);
+  showFilteredTrails(retrievedSortedTrails)
+}
+
+
 
 
 // const happyTrailsMapId = '5323d059acfa9244'
@@ -16,7 +19,7 @@
 
 
 
-
+let currentLocation = {lat: 0, long: 0}
 
 
 
@@ -36,6 +39,12 @@ searchZipButton.addEventListener('click', () => {
     document.querySelector('.main-search').style.display = 'none'
     document.getElementById('main-image').style.display = 'none'
     showMap(inputValue, allTrails)
+    getLatWithZipcode(inputValue)
+    .then(result => {
+      currentLocation.lat = result.lat;
+      currentLocation.long = result.lng;
+      showFilteredTrails(sortLocationsByDistance(allTrails, result.lat, result.lng))
+    })
   }
 })
 
@@ -47,7 +56,9 @@ sidebarZipButton.addEventListener('click', () => {
     showErrorMessage()
   } else {
     console.log(inputValue)
-    showMap(inputValue, allTrails)
+    //showMap(inputValue, allTrails)
+    getLatWithZipcode('91602')
+    .then(result => showFilteredTrails(sortLocationsByDistance(filterTrails(), result.lat, result.lng)))
   }
 })
 
@@ -172,13 +183,13 @@ function showFilteredTrails(array) {
     <div class="filter-result">
     <img src="${trail.photo[0]}" alt="" class="the-image">
     <div class="trail-name">
-    <h3>${trail.name}</h3><img src=images/location-icon.png onmouseover="showTrailOnMap(${trail.coordinates.lat}, ${trail.coordinates.long})">
+    <h3 class="the-name">${trail.name}</h3><img src=images/location-icon.png onmouseover="showTrailOnMap(${trail.coordinates.lat}, ${trail.coordinates.long})">
     </div
     <p>Angeles National Forest</p>
     <p class="stats">${trail.length} mi    ${trail.difficulty}    ${trail.vibes[0]}    ${trail.ascend}</p>
   </div>
          `
-    trailDiv.querySelector('.the-image').addEventListener('click', () => {
+    trailDiv.querySelector('.the-name').addEventListener('click', () => {
       goToTrailPage(trail)
     })
     filterDiv.appendChild(trailDiv)
@@ -327,6 +338,8 @@ function getTrailsOrError(filter){
     }
     showFilteredTrails(sortedTrails)
     makeTabInactive(currentlyActiveTab)
+    const sortedTrailsJSON = JSON.stringify(sortedTrails);
+    sessionStorage.setItem('sortedTrails', sortedTrailsJSON);
   }
 }
 
@@ -421,7 +434,7 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
 function sortLocationsByDistance(locations, referenceLat, referenceLon) {
   // Add a distance property to each location in the array
   locations.forEach((location) => {
-    location.distance = calculateDistance(referenceLat, referenceLon, location.coordinates.lat, location.coordinates.lon);
+    location.distance = calculateDistance(referenceLat, referenceLon, location.coordinates.lat, location.coordinates.long);
   });
 
   // Sort the array based on the distance property
@@ -437,7 +450,7 @@ function sortLocationsByDistance(locations, referenceLat, referenceLon) {
 
 
 
-async function getLatLongFromZipCode(zipCode) {
+async function getLatWithZipcode(zipCode) {
   const apiKey = 'AIzaSyB28bmNkVX6s0hpsj2Zk6kKU_HXJ739ArQ'
   const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=${apiKey}`;
 
@@ -461,8 +474,6 @@ async function getLatLongFromZipCode(zipCode) {
     return null;
   }
 }
-
-
 
 
 

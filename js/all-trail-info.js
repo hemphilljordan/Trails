@@ -65,6 +65,53 @@ const blackStarCanyon = new Trail(
   ['waterfalls'], ['images/black-star-canyon/black-star-canyon.jpeg'], 'Hard', 'uphill'
 )
 
+const sanAntonioFalls = new Trail(
+  'San Antonio Falls', {lat: 34.26639363892356, long: -117.6267970884988}, 1.4, 42, 285, ['waterfalls'], ['images/san-antonio-falls/san-antonio-falls.webp', 'images/san-antonio-falls/san-antonio-falls-2.webp'], 'Easy', 'flat'
+)
+
+const cedarCreekFalls = new Trail(
+  'Cedar Creek Falls', {lat: 32.99736679923003, long: -116.72575466042868}, 5.4, 160, 1069, ['waterfalls'], ['images/cedar-creek-falls/cedar-creek-falls.webp', 'images/cedar-creek-falls/cedar-creek-falls-2.webp'], 'Hard', 'uphill'
+)
+
+const bigFalls = new Trail(
+  'Big Falls', {lat: 34.08246159261607, long: -116.8935097615996}, 0.7, 27, 226, ['waterfalls'], ['images/big-falls/big-falls.webp'], 'Medium', 'flat'
+)
+
+const threeSistersFalls = new Trail(
+  'Three Sisters Falls', {lat: 32.981283470767025, long: -116.68420030397677}, 4.1, 100, 984, ['waterfalls'], ['images/three-sisters-falls/three-sisters-falls.webp', 'images/three-sisters-falls/three-sisters-falls-2.webp', 'images/three-sisters-falls/three-sisters-falls-3.jpeg'], 'Medium', 'uphill'
+)
+
+const santaPaulaCanyonFalls = new Trail(
+  'Santa Paula Canyon Falls', {lat: 34.453048617919954, long: -119.05752440373074}, 7.4, 240, 961, ['waterfalls'], ['images/santa-paula-canyon-falls/santa-paula-canyon.webp', 'images/santa-paula-canyon-falls/santa-paula-canyon-2.webp'], 'Medium', 'flat'
+)
+
+const eatonCanyonFalls = new Trail(
+  'Eaton Canyon Falls', {lat: 34.19475983401327, long: -118.10249027508937}, 3.5, 88, 446, ['waterfalls'], ['images/eaton-canyon-falls/eaton-canyon-falls.webp', 'images/eaton-canyon-falls/eaton-canyon-falls-2.webp'], 'Medium', 'flat'
+)
+
+const etiwandaFalls = new Trail(
+  'Etiwanda Falls', {lat: 34.16614839652092, long: -117.52324135767023}, 3.2, 104, 774, ['waterfalls'], ['images/etiwanda-falls/etiwanda-falls.webp', 'images/etiwanda-falls/etiwanda-falls-2.webp'], "Medium", 'flat'
+)
+
+const lewisFalls = new Trail(
+  'Lewis Falls', {lat: 34.307249068723124, long: -117.8367087192599}, 0.8, 20, 360, ['waterfalls'], ['images/lewis-falls/lewis-falls.webp', 'images/lewis-falls/lewis-falls-2.webp'], 'Easy', 'flat'
+)
+
+const bonitaFalls = new Trail(
+  'Bonita Falls', {lat: 34.23177288847652, long: -117.50494530007941}, 1.5, 48, 334, ['waterfalls'], ['images/bonita-falls/bonita-falls.webp', 'images/bonita-falls/bonita-falls-2.webp'], 'Easy', 'flat'
+)
+
+const tahquitzCanyon = new Trail(
+  'Tahquitz Canyon', {lat: 33.81022239084388, long: -116.5526890885015}, 2, 54, 324, ['waterfalls'], ['images/tahquitz-canyon/tahquitz-canyon.webp', 'images/tahquitz-canyon/tahquitz-canyon-2.webp'], 'Easy', 'flat'
+)
+
+const tenajaFalls = new Trail(
+  'Tenaja Falls', {lat: 33.549396419185506, long: -117.3945231591763}, 1.6, 45, 321, ['waterfalls'], ['images/tenaja-falls/tenaja-falls.webp'], "Easy", 'flat'
+)
+
+const ortegaFalls = new Trail(
+  'Ortega Falls', {lat: 33.62649470561559, long: -117.42801090859582}, 0.2, 30, 19, ['waterfalls'], ['images/ortega-falls/ortega-falls.webp', 'images/ortega-falls/ortega-falls-2.webp'], 'Easy', 'flat'
+)
 
 // Mountains
 

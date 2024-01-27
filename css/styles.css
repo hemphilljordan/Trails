@@ -486,6 +486,10 @@ body {
   width: 150px;
 }
 
+.the-name{
+  cursor: pointer;
+}
+
 
 
 
@@ -517,16 +521,16 @@ body {
 
   .filter-drop-menu{
     position: fixed;
-    top: 65%;
+    top: 60%;
     left: 0;
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
   }
   .mobile-menu {
-    top: 75%;
+    top: 70%;
   }
   .mobile-menu2 {
-    top: 80%;
+    top: 75%;
   }
   .map-div {
     flex-direction: column;

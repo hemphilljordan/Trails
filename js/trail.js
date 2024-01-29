@@ -276,8 +276,11 @@ shareButton.addEventListener('click', () => {
   document.querySelector('.tint').style.display = 'flex'
 })
 
+
+
 function openAppleMaps(latitude, longitude) {
-  const mapsUrl = `http://maps.apple.com/?ll=${latitude},${longitude}`;
+  //const mapsUrl = `http://maps.apple.com/?ll=${latitude},${longitude}`;
+  const mapsUrl = `http://maps.apple.com/?daddr=${latitude},${longitude}&dirflg=d`;
   window.open(mapsUrl);
 }
 
@@ -285,6 +288,5 @@ const directionsButton = document.getElementById('directions')
 directionsButton.addEventListener('click', () => {
   openAppleMaps(currentTrail.coordinates.lat, currentTrail.coordinates.long)
 })
-
 
 

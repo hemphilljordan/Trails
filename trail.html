@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/trail.css">
   <title>Trails</title>
@@ -35,13 +36,13 @@
         </div>
         <p>Photos</p>
       </div>
-      <div class="choice">
+      <div class="choice" id="directions">
         <div class="icon">
           <img src="images/camera.svg" alt="">
         </div>
         <p>Directions</p>
       </div>
-      <div class="choice">
+      <!-- <div class="choice">
         <div class="icon">
           <img src="images/camera.svg" alt="">
         </div>
@@ -52,8 +53,8 @@
           <img src="images/camera.svg" alt="">
         </div>
         <p>How Far?</p>
-      </div>
-      <div class="choice">
+      </div> -->
+      <div class="choice" id="share">
         <div class="icon">
           <img src="images/camera.svg" alt="">
         </div>
@@ -144,14 +145,27 @@
 
 
 
-
-
-
+<div class="tint">
+  <div class="share-popup">
+    <div class="close-x-popup">
+      <svg width="30px" height="30px" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+        </svg>
+     </div>
+    <h1>Share this trail!</h1>
+    <a class="facebook" target="blank"><i class="fab fa-facebook"></i><span> Share to Facebook</span></a>
+    <a class="twitter" target="blank"><i class="fab fa-twitter"></i> <span>Share to Twitter</span></a>
+    <a class="linkedin" target="blank"><i class="fab fa-linkedin"></i> <span>Share to LinkedIn</span></a>
+    <a class="reddit" target="blank"><i class="fab fa-reddit"></i><span>Share to Reddit</span></a>
+  </div>
+</div>
 
 
 
   <script src="js/all-trail-info.js"></script>
   <script src="js/trail.js"></script>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6y5xWkUe3WRggGZ97rgZU4ImqcR95d-U&map_ids=34b967838d0d8d3&callback=initMap"></script>
 </body>
 
 </html>

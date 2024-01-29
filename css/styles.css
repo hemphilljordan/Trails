@@ -291,8 +291,16 @@ body {
 }
 
 .filter-result img {
-  height: 180px;
   border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-div {
+height: 180px;
+overflow: hidden;
+margin-bottom: 12px;
 }
 
 .filter-result {

@@ -32,12 +32,12 @@ const stoddardCanyon = new Trail(
 
 const millardCanyon = new Trail(
   'Millard Canyon Falls', {lat: 34.217557910820425, long: -118.14545050248032}, 1.2, 25, 246,
-  ['waterfalls'], ['images/millard-falls/millard-falls.jpeg'], 'Easy', 'flat'
+  ['waterfalls'], ['images/millard-falls/millard-falls-2.jpeg', 'images/millard-falls/millard-falls.jpeg'], 'Easy', 'flat'
 )
 
 const cooperCanyonFalls = new Trail(
   'Cooper Canyon Falls', {lat: 34.362078497081896, long: -117.90213784374819}, 6.3, 180, 1361,
-  ['waterfalls'],['images/cooper-canyon-falls/cooper-canyon-falls.jpeg'], 'Hard', 'flat'
+  ['waterfalls'],['images/cooper-canyon-falls/cooper-canyon-falls.webp'], 'Hard', 'flat'
 )
 
 const switzerFalls = new Trail(
@@ -70,15 +70,15 @@ const sanAntonioFalls = new Trail(
 )
 
 const cedarCreekFalls = new Trail(
-  'Cedar Creek Falls', {lat: 32.99736679923003, long: -116.72575466042868}, 5.4, 160, 1069, ['waterfalls'], ['images/cedar-creek-falls/cedar-creek-falls.webp', 'images/cedar-creek-falls/cedar-creek-falls-2.webp'], 'Hard', 'uphill'
+  'Cedar Creek Falls', {lat: 32.99736679923003, long: -116.72575466042868}, 5.4, 160, 1069, ['waterfalls'], ['images/cedar-creek-falls/cedar-creek-falls-2.webp', 'images/cedar-creek-falls/cedar-creek-falls.webp'], 'Hard', 'uphill'
 )
 
 const bigFalls = new Trail(
-  'Big Falls', {lat: 34.08246159261607, long: -116.8935097615996}, 0.7, 27, 226, ['waterfalls'], ['images/big-falls/big-falls.webp'], 'Medium', 'flat'
+  'Big Falls', {lat: 34.08246159261607, long: -116.8935097615996}, 0.7, 27, 226, ['waterfalls'], ['images/big-falls/big-falls-2.jpg', 'images/big-falls/big-falls.webp'], 'Medium', 'flat'
 )
 
 const threeSistersFalls = new Trail(
-  'Three Sisters Falls', {lat: 32.981283470767025, long: -116.68420030397677}, 4.1, 100, 984, ['waterfalls'], ['images/three-sisters-falls/three-sisters-falls.webp', 'images/three-sisters-falls/three-sisters-falls-2.webp', 'images/three-sisters-falls/three-sisters-falls-3.jpeg'], 'Medium', 'uphill'
+  'Three Sisters Falls', {lat: 32.981283470767025, long: -116.68420030397677}, 4.1, 100, 984, ['waterfalls'], ['images/three-sisters-falls/three-sisters-falls.jpeg', 'images/three-sisters-falls/three-sisters-falls-2.webp', 'images/three-sisters-falls/three-sisters-falls-3.jpeg', 'images/three-sisters-falls/three-sisters-falls-4.webp'], 'Medium', 'uphill'
 )
 
 const santaPaulaCanyonFalls = new Trail(
@@ -86,23 +86,23 @@ const santaPaulaCanyonFalls = new Trail(
 )
 
 const eatonCanyonFalls = new Trail(
-  'Eaton Canyon Falls', {lat: 34.19475983401327, long: -118.10249027508937}, 3.5, 88, 446, ['waterfalls'], ['images/eaton-canyon-falls/eaton-canyon-falls.webp', 'images/eaton-canyon-falls/eaton-canyon-falls-2.webp'], 'Medium', 'flat'
+  'Eaton Canyon Falls', {lat: 34.19475983401327, long: -118.10249027508937}, 3.5, 88, 446, ['waterfalls'], ['images/eaton-canyon-falls/eaton-canyon-falls.jpeg', 'images/eaton-canyon-falls/eaton-canyon-falls-2.webp', 'images/eaton-canyon-falls/eaton-canyon-falls-3.webp'], 'Medium', 'flat'
 )
 
 const etiwandaFalls = new Trail(
-  'Etiwanda Falls', {lat: 34.16614839652092, long: -117.52324135767023}, 3.2, 104, 774, ['waterfalls'], ['images/etiwanda-falls/etiwanda-falls.webp', 'images/etiwanda-falls/etiwanda-falls-2.webp'], "Medium", 'flat'
+  'Etiwanda Falls', {lat: 34.16614839652092, long: -117.52324135767023}, 3.2, 104, 774, ['waterfalls'], ['images/etiwanda-falls/etiwanda-falls.jpeg', 'images/etiwanda-falls/etiwanda-falls-2.webp', 'images/etiwanda-falls/etiwanda-falls-3.webp'], "Medium", 'flat'
 )
 
 const lewisFalls = new Trail(
-  'Lewis Falls', {lat: 34.307249068723124, long: -117.8367087192599}, 0.8, 20, 360, ['waterfalls'], ['images/lewis-falls/lewis-falls.webp', 'images/lewis-falls/lewis-falls-2.webp'], 'Easy', 'flat'
+  'Lewis Falls', {lat: 34.307249068723124, long: -117.8367087192599}, 0.8, 20, 360, ['waterfalls'], ['images/lewis-falls/lewis-falls.png', 'images/lewis-falls/lewis-falls-2.webp', 'images/lewis-falls/lewis-falls-3.webp'], 'Easy', 'flat'
 )
 
 const bonitaFalls = new Trail(
-  'Bonita Falls', {lat: 34.23177288847652, long: -117.50494530007941}, 1.5, 48, 334, ['waterfalls'], ['images/bonita-falls/bonita-falls.webp', 'images/bonita-falls/bonita-falls-2.webp'], 'Easy', 'flat'
+  'Bonita Falls', {lat: 34.23177288847652, long: -117.50494530007941}, 1.5, 48, 334, ['waterfalls'], ['images/bonita-falls/bonita-falls.jpeg', 'images/bonita-falls/bonita-falls-2.webp', 'images/bonita-falls/bonita-falls-3.webp'], 'Easy', 'flat'
 )
 
 const tahquitzCanyon = new Trail(
-  'Tahquitz Canyon', {lat: 33.81022239084388, long: -116.5526890885015}, 2, 54, 324, ['waterfalls'], ['images/tahquitz-canyon/tahquitz-canyon.webp', 'images/tahquitz-canyon/tahquitz-canyon-2.webp'], 'Easy', 'flat'
+  'Tahquitz Canyon', {lat: 33.81022239084388, long: -116.5526890885015}, 2, 54, 324, ['waterfalls'], ['images/tahquitz-canyon/tahquitz-canyon.jpeg', 'images/tahquitz-canyon/tahquitz-canyon-2.webp', 'images/tahquitz-canyon/tahquitz-canyon-2.webp'], 'Easy', 'flat'
 )
 
 const tenajaFalls = new Trail(
@@ -110,7 +110,7 @@ const tenajaFalls = new Trail(
 )
 
 const ortegaFalls = new Trail(
-  'Ortega Falls', {lat: 33.62649470561559, long: -117.42801090859582}, 0.2, 30, 19, ['waterfalls'], ['images/ortega-falls/ortega-falls.webp', 'images/ortega-falls/ortega-falls-2.webp'], 'Easy', 'flat'
+  'Ortega Falls', {lat: 33.62649470561559, long: -117.42801090859582}, 0.2, 30, 19, ['waterfalls'], ['images/ortega-falls/ortega-falls.jpeg', 'images/ortega-falls/ortega-falls-2.webp', 'images/ortega-falls/ortega-falls-3.webp'], 'Easy', 'flat'
 )
 
 // Mountains
@@ -121,7 +121,7 @@ const bridgeToNowhere = new Trail(
   )
 
 const wisdomTree = new Trail(
-  'Wisdom Tree', {lat: 34.13616651908845, long: -118.33206920947036}, 1.8, 90, 1690, ['mountains'], ['images/wisdom-tree/wisdom-tree2.jpeg'], 'Medium', 'uphill'
+  'Wisdom Tree', {lat: 34.13616651908845, long: -118.33206920947036}, 1.8, 90, 1690, ['mountains'], ['images/wisdom-tree/wisdom-tree-3.jpeg', 'images/wisdom-tree/wisdom-tree2.jpeg'], 'Medium', 'uphill'
 )
 
 const mountIslip = new Trail(
@@ -131,11 +131,11 @@ const mountIslip = new Trail(
 //Rock formations
 
 const gardenOfTheGods = new Trail(
-  'Garden of the Gods', {lat: 34.27579486060916, long: -118.60955544492191}, 0.3, 15, 95, ['rocks'], ['images/garden-of-gods/garden-of-gods.avif'], 'Easy', 'uphill'
+  'Garden of the Gods', {lat: 34.27579486060916, long: -118.60955544492191}, 0.3, 15, 95, ['rocks'], ['images/garden-of-gods/garden-of-gods.jpeg', 'images/garden-of-gods/garden-of-gods-2.avif'], 'Easy', 'uphill'
 )
 
 const skullRock = new Trail(
-  'Skull Rock', {lat: 33.99802501198664, long: -116.05983922209107}, 1.7, 50, 147, ['rocks'], ['images/skull-rock/skull-rock.jpeg'], 'Easy', 'uphill'
+  'Skull Rock', {lat: 33.99802501198664, long: -116.05983922209107}, 1.7, 50, 147, ['rocks'], ['images/skull-rock/skull-rock-2.jpeg', 'images/skull-rock/skull-rock.jpeg'], 'Easy', 'uphill'
 )
 
 
@@ -148,11 +148,11 @@ const generalSherman = new Trail(
 //Aerial Views
 
 const cucamongaPeak = new Trail(
-  'Cucamonga Peak', {lat: 34.22361928240816, long: -117.58531296783475}, 11.1, 300, 4186, ['aerial'], ['images/cucamonga-peak/cucamonga.jpeg'], 'Hard', 'uphill'
+  'Cucamonga Peak', {lat: 34.22361928240816, long: -117.58531296783475}, 11.1, 300, 4186, ['aerial'], ['images/cucamonga-peak/cucamonga-2.jpeg', 'images/cucamonga-peak/cucamonga.jpeg'], 'Hard', 'uphill'
 )
 
 const ontarioPeak = new Trail(
-  'Ontario Peak', {lat: 34.22983984477077, long: -117.6243725905854}, 12.1, 300, 3894, ['aerial'], ['images/ontario-peak/ontario-peak.jpeg'], 'Hard', 'uphill'
+  'Ontario Peak', {lat: 34.22983984477077, long: -117.6243725905854}, 12.1, 300, 3894, ['aerial'], ['images/ontario-peak/ontario-peak-2.webp', 'images/ontario-peak/ontario-peak.jpeg'], 'Hard', 'uphill'
 )
 
 const strawberryPeak = new Trail(
@@ -175,7 +175,7 @@ const mountBadenPowell = new Trail(
 // water
 
 const peanutLake = new Trail(
-  'Peanut Lake', {lat: 36.56206983201087, long: -118.23763027373333}, 2.3, 30, 485, ['water'], ['images/peanut-lake/peanut-lake.jpeg'], 'Easy', 'flat'
+  'Peanut Lake', {lat: 36.56206983201087, long: -118.23763027373333}, 2.3, 30, 485, ['water'], ['images/peanut-lake/peanut-lake-2.jpeg', 'images/peanut-lake/peanut-lake.jpeg'], 'Easy', 'flat'
 )
 
 const wildMustardLoop = new Trail(

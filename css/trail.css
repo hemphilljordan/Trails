@@ -59,6 +59,7 @@ body {
 
 .below-image {
   display: flex;
+  justify-content: space-around;
 }
 
 .left-div {
@@ -266,6 +267,88 @@ body {
   left: 30px;
   width: 40px;
   transform: scaleX(-1);
+}
+
+
+.tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 29;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  background-color: white;
+  height: 450px;
+  width: 400px;
+  z-index: 30;
+  border-radius: 20px;
+}
+
+.share-popup h1 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.share-popup i {
+  font-size: 40px;
+  color: white;
+}
+
+.share-popup span {
+  color: white;
+}
+
+.share-popup a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: green;
+  width: 80%;
+  margin: 10px 20px;
+  border-radius: 50px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.share-popup a:hover {
+  opacity: 1;
+}
+
+.close-x-popup {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  background-color: rgb(236, 228, 228);
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.close-x-popup svg {
+fill: rgb(124, 112, 112)
+}
+
+.close-x-popup:hover {
+  background-color: rgb(228, 220, 220);
 }
 
 

@@ -40,7 +40,7 @@ const formattedDate = currentDate.toLocaleDateString('en-US', options);
 const dayInitials = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
 const daysOnPage = document.querySelectorAll('.get-day')
 for (let i = 0; i < 5; i++) {
-  if((i + currentDay > 6)){
+  if ((i + currentDay > 6)) {
     currentDay = currentDay - 7
   }
   daysOnPage[i].textContent = dayInitials[i + currentDay];
@@ -54,7 +54,7 @@ for (let i = 1; i <= 4; i++) {
 }
 
 const datesOnPage = document.querySelectorAll('.get-date')
-for(let i = 0; i < 5; i++){
+for (let i = 0; i < 5; i++) {
   datesOnPage[i].textContent = dateNumArray[i]
 }
 
@@ -71,7 +71,7 @@ dateOnPage.forEach((date) => {
 })
 
 
-for(let i = 1; i < 5; i++){
+for (let i = 1; i < 5; i++) {
   dateOnPage[i].addEventListener('click', () => {
     const currentDateString = dateNumArray[i].toString()
     getWeatherForecast(currentDateString)
@@ -94,24 +94,24 @@ function getWeatherForecast(dayNum) {
       const timestamp = data.list[0].dt
       const date = new Date(timestamp * 1000)
 
-      
-          // 2024-01-24 09:00:00
-          const reducedNoonDates = []
-          let chosenDateObject;
 
-        data.list.forEach((date) => {
-          if(date.dt_txt[11] + date.dt_txt[12] === '12'){
-            //console.log(date)
-            reducedNoonDates.push(date)
-          }
-        })
+      // 2024-01-24 09:00:00
+      const reducedNoonDates = []
+      let chosenDateObject;
 
-        reducedNoonDates.forEach((date) => {
-          if(date.dt_txt[8] + date.dt_txt[9] === dayNum){
-            chosenDateObject = date
-            console.log(chosenDateObject)
-          }
-        })
+      data.list.forEach((date) => {
+        if (date.dt_txt[11] + date.dt_txt[12] === '12') {
+          //console.log(date)
+          reducedNoonDates.push(date)
+        }
+      })
+
+      reducedNoonDates.forEach((date) => {
+        if (date.dt_txt[8] + date.dt_txt[9] === dayNum) {
+          chosenDateObject = date
+          console.log(chosenDateObject)
+        }
+      })
 
 
       document.getElementById('main-temp').textContent = Math.floor(chosenDateObject.main.temp)
@@ -150,29 +150,29 @@ function getCurrentWeather() {
 getCurrentWeather()
 
 
-function getWeatherIcon(currentWeather){
-  if(currentWeather == 'Snow'){
+function getWeatherIcon(currentWeather) {
+  if (currentWeather == 'Snow') {
     document.getElementById('weather-img').src = 'images/weather-icons/snow.png'
   }
-  if(currentWeather == 'Wind'){
+  if (currentWeather == 'Wind') {
     document.getElementById('weather-img').src = 'images/weather-icons/wind.png'
   }
-  if(currentWeather == 'Rain'){
+  if (currentWeather == 'Rain') {
     document.getElementById('weather-img').src = 'images/weather-icons/rain.png'
   }
-  if(currentWeather == 'Mist'){
+  if (currentWeather == 'Mist') {
     document.getElementById('weather-img').src = 'images/weather-icons/mist.png'
   }
-  if(currentWeather == 'Humidity'){
+  if (currentWeather == 'Humidity') {
     document.getElementById('weather-img').src = 'images/weather-icons/humidity.png'
   }
-  if(currentWeather == 'Drizzle'){
+  if (currentWeather == 'Drizzle') {
     document.getElementById('weather-img').src = 'images/weather-icons/drizzle.png'
   }
-  if(currentWeather == 'Clouds'){
+  if (currentWeather == 'Clouds') {
     document.getElementById('weather-img').src = 'images/weather-icons/clouds.png'
   }
-  if(currentWeather == 'Clear'){
+  if (currentWeather == 'Clear') {
     document.getElementById('weather-img').src = 'images/weather-icons/clear.png'
   }
 }
@@ -201,7 +201,7 @@ photoButton.addEventListener('click', () => {
     photoCollection.appendChild(photoDiv)
     allSlides.push(photoDiv)
 
-    if(index === activeSlide){
+    if (index === activeSlide) {
       photoDiv.classList.add('active')
     }
   })
@@ -233,15 +233,58 @@ previousPhotoButton.addEventListener('click', () => {
   arrowDisplay()
 })
 
-function arrowDisplay(){
-  if(activeSlide === currentTrail.photo.length - 1){
+function arrowDisplay() {
+  if (activeSlide === currentTrail.photo.length - 1) {
     nextPhotoButton.style.display = 'none'
   } else {
     nextPhotoButton.style.display = 'flex'
   }
-  if(activeSlide > 0){
+  if (activeSlide > 0) {
     previousPhotoButton.style.display = 'flex'
   } else {
     previousPhotoButton.style.display = 'none'
   }
 }
+
+
+//will need to consider how link works to goto specific trail
+
+const link = encodeURI(window.location.href);
+// const link = 'https://www.el-bano.org'
+const msg = encodeURIComponent('Hey, check out this dope trail!');
+const title = encodeURIComponent(currentTrail.name)
+
+const fb = document.querySelector('.facebook')
+fb.href = `https://www.facebook.com/share.php?u=${link}`
+
+const twitter = document.querySelector('.twitter')
+twitter.href = `https://twitter.com/share?&url=${link}&text=${msg}`
+
+const linkedIn = document.querySelector('.linkedin')
+linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${link}`
+
+const reddit = document.querySelector('.reddit')
+reddit.href = `http://www.reddit.com/submit?url=${link}&title=${title}`
+
+const closePopupButton = document.querySelector('.close-x-popup')
+closePopupButton.addEventListener('click', () => {
+  document.querySelector('.tint').style.display = 'none'
+})
+
+const shareButton = document.getElementById('share')
+shareButton.addEventListener('click', () => {
+  document.querySelector('.tint').style.display = 'flex'
+})
+
+function openAppleMaps(latitude, longitude) {
+  const mapsUrl = `http://maps.apple.com/?ll=${latitude},${longitude}`;
+  window.open(mapsUrl);
+}
+
+const directionsButton = document.getElementById('directions')
+directionsButton.addEventListener('click', () => {
+  openAppleMaps(currentTrail.coordinates.lat, currentTrail.coordinates.long)
+})
+
+
+

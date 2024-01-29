@@ -20,6 +20,7 @@ if(getTrail){
 
 
 let currentLocation = {lat: 0, long: 0}
+let showInfo = false
 
 
 
@@ -131,6 +132,7 @@ function showMap(zipcode, trailArray, lat, long) {
 }
 
 
+
 function goToTrailPage(trail){
   const stringifyTrailInfo = JSON.stringify(trail)
   sessionStorage.setItem('trail', stringifyTrailInfo)
@@ -181,7 +183,9 @@ function showFilteredTrails(array) {
     const trailDiv = document.createElement('div')
     trailDiv.innerHTML = `
     <div class="filter-result">
+    <div class="image-div">
     <img src="${trail.photo[0]}" alt="" class="the-image">
+    </div>
     <div class="trail-name">
     <h3 class="the-name">${trail.name}</h3><img src=images/location-icon.png onmouseover="showTrailOnMap(${trail.coordinates.lat}, ${trail.coordinates.long})">
     </div
@@ -202,7 +206,9 @@ function showTrailOnMap(lat, long){
 }
 
 
-
+function showInfoWindow(infoWindow){
+  infoWindow()
+}
 
 
 

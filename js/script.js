@@ -56,10 +56,9 @@ sidebarZipButton.addEventListener('click', () => {
   if (inputValue.length !== 5 || /[a-zA-Z]/.test(inputValue)) {
     showErrorMessage()
   } else {
-    console.log(inputValue)
-    //showMap(inputValue, allTrails)
-    getLatWithZipcode('91602')
+    getLatWithZipcode(inputValue)
     .then(result => showFilteredTrails(sortLocationsByDistance(filterTrails(), result.lat, result.lng)))
+    sidebarZipcodeInput.value = ''
   }
 })
 
@@ -468,8 +467,7 @@ async function getLatWithZipcode(zipCode) {
       const location = data.results[0].geometry.location;
       const lat = location.lat;
       const lng = location.lng;
-      
-     // console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+
       return { lat: lat, lng: lng };
     } else {
       console.error('Unable to retrieve coordinates for the given zip code.');
@@ -491,5 +489,3 @@ async function getLatWithZipcode(zipCode) {
 // when zipcode is entered, arrange trails in order of closest
 
 
-
-// FILTERS ACT FUNNY WHEN RETURNING FROM THE BACK BUTTON ON A TRAIL PAGE

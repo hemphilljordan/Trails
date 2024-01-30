@@ -12,8 +12,7 @@ document.getElementById('trail-length').textContent = `${currentTrail.length} mi
 document.getElementById('trail-time').textContent = `${currentTrail.avgTimeMinutes} min`
 document.getElementById('trail-elevation').textContent = `${currentTrail.elevationFeet} ft`
 document.getElementById('trail-difficulty').textContent = currentTrail.difficulty
-
-
+document.querySelector('iframe').src = `https://www.youtube.com/embed/${currentTrail.youTube}`
 
 
 

@@ -114,11 +114,29 @@ const ortegaFalls = new Trail(
   'Ortega Falls', {lat: 33.62649470561559, long: -117.42801090859582}, 0.2, 30, 19, ['waterfalls'], ['images/ortega-falls/ortega-falls.jpeg', 'images/ortega-falls/ortega-falls-2.webp', 'images/ortega-falls/ortega-falls-3.webp'], 'Easy', 'flat', 'ugoz7bfCBfI?si=KvYVE47ExYlOq2kh'
 )
 
+const whiskeytownFalls = new Trail(
+  'Whiskeytown Falls', {lat: 40.62708339835631, long: -122.66887813504691}, 2.6, 90, 705, ['waterfalls'], ['images/whiskeytown-falls/whiskeytown-falls.webp', 'images/whiskeytown-falls/whiskeytown-falls-2.webp'], 'Easy', 'flat', 'CvyD1mCefMU?si=Hq8Jc6Q0FCUT5fTF'
+)
+
+const mistTrail = new Trail(
+  'Mist Trail', {lat: 37.817739254270414, long: -119.52543598477757}, 6.4, 250, 2208, ['waterfalls'], ['images/mist-trail/mist-trail.webp', 'images/mist-trail/mist-trail-2.webp'], 'Hard', 'uphill', '3Kdh6nrZI0U?si=Ra7AkNmhrjWpngxr'
+)
+
+
+
+
+
+
+
+
+
+
+
 // Mountains
 
 const bridgeToNowhere = new Trail(
   'Bridge To Nowhere', {lat: 34.28352575151904, long: -117.74552970060647}, 9.5, 220, 1246,
-  ['mountains'], ['images/bridge-to-nowhere/Bridge-to-Nowhere.webp'], 'Hard', 'uphill', '3hm0TgQKQoE?si=4J-4LF97ieYahON2'
+  ['mountains', 'landmark'], ['images/bridge-to-nowhere/Bridge-to-Nowhere.webp'], 'Hard', 'uphill', '3hm0TgQKQoE?si=4J-4LF97ieYahON2'
   )
 
 const wisdomTree = new Trail(
@@ -128,6 +146,13 @@ const wisdomTree = new Trail(
 const mountIslip = new Trail(
   'Mount Islip', {lat: 34.34636714245459, long: -117.84047098234949}, 2.5, 102, 990, ['mountains'], ['images/mount-islip/mount-islip.jpeg'], 'Medium', 'uphill', 'Gp1ok0KHiaA?si=M9V7XM70evfpr2ds'
 )
+
+
+
+
+
+
+
 
 //Rock formations
 
@@ -140,11 +165,34 @@ const skullRock = new Trail(
 )
 
 
+
+
+
+
+
+
 // Landmarks
 
 const generalSherman = new Trail(
   'General Sherman', {lat: 36.58193176669674, long: -118.75142337468358}, 1.2, 40, 196, ['landmark'], ['images/general-sherman/general-sherman.jpeg'], 'Easy', 'flat', 'TfcJJFtkDRM?si=5KY83tNoD-xNOKXs'
 )
+
+const goatCanyonTrestle = new Trail(
+  'Goat Canyon Trestle', {lat: 32.73209664609713, long: -116.18356671647969}, 5.8, 200, 2408, ['landmark'], ['images/goat-canyon-trestle/goat-canyon-trestle.webp', 'images/goat-canyon-trestle/goat-canyon-trestle-2.webp'], 'Hard', 'flat', 'z9whE1W4e0E?si=0fVeIdoyGwdBjAlp'
+)
+
+const elCapitan = new Trail(
+  'El Capitan', {lat: 37.73431753817104, long: -119.63771303257994}, 13.6, 540, 4799, ['landmark'], ['images/el-capitan/el-capitan.webp', 'images/el-capitan/el-capitan-2.webp'], 'Hard', 'uphill', '_h1tbeu1zzQ?si=ny2vXdCvzecYz4xY'
+)
+
+
+
+
+
+
+
+
+
 
 //Aerial Views
 
@@ -172,6 +220,64 @@ const mountBadenPowell = new Trail(
   'Mount Baden-Powell', {lat: 34.360805945918976, long: -117.76476172882963}, 7.8, 200, 2775, ['aerial'], ['images/mount-baden-powell/mount-baden-powell.jpeg'], 'Hard', 'uphill', '75-MF8D_T3g?si=TOMWCWz4oB_tz-tV'
 )
 
+const lembertDome = new Trail(
+  'Lembert Dome', {lat: 37.881619928978246, long: -119.34810220763195}, 3.8, 120, 839, ['aerial'], ['images/lembert-dome/lembert-dome.webp', 'images/lembert-dome/lembert-dome-2.webp'], 'Medium', 'uphill', 'DoUs0eP1eVU?si=J68r_TIOFzl9Mi5r'
+)
+
+const taftPoint = new Trail(
+  'Taft Point', {lat: 37.714677880205954, long: -119.60460861498373}, 2.3, 62, 354, ['aerial'], ['images/taft-point/taft-point.webp', 'images/taft-point/taft-point-2.webp'], 'Easy', 'uphill', 'q8PW-vdzmyQ?si=l6pWWApWjC-5QapS'
+)
+
+const sierraButtes = new Trail(
+  'Sierra Buttes', {lat: 39.5957756325786, long: -120.64083407514376}, 5.1, 186, 1545, ['aerial'], ['images/sierra-buttes/sierra-buttes.webp', 'images/sierra-buttes/sierra-buttes-2.webp'], 'Hard', 'uphill', '00QPqBqU168?si=hsKz325VncQuawvC'
+)
+
+const sandstonePeak = new Trail(
+  'Sandstone Peak', {lat: 34.12191380269343, long: -118.93143994091709}, 3, 113, 997, ['aerial'], ['images/sandstone-peak/sandstone-peak.webp', 'images/sandstone-peak/sandstone-peak-2.webp'], 'Medium', 'uphill', 'npUMpJiSe4w?si=2eTMC2fCZwE9LK6J'
+)
+
+const mountDiablo = new Trail(
+  'Mount Diablo', {lat: 37.88307937819731, long: -121.91398135311844}, 12.8, 455, 3710, ['aerial'], ['images/mount-diablo/mount-diablo.webp', 'images/mount-diablo/mount-diablo-2.webp'], 'Hard', 'uphill', 'Wnxk26Tm4sc?si=YjJIcJ7rm4urIE0A'
+)
+
+const lassenPeak = new Trail(
+  'Lassen Peak', {lat: 40.476191773634206, long: -121.5063034976187}, 4.9, 210, 1971, ['aerial'], ['images/lassen-peak/lassen-peak.webp', 'images/lassen-peak/lassen-peak-2.webp'], 'Hard', 'uphill', 'qFccxwJqHQM?si=2Zvro34IdfDTuPpY'
+)
+
+const crastleCragDome = new Trail(
+  'Castle Crag Dome', {lat: 41.163203033748694, long: -122.30566012301671}, 5.2, 180, 2066, ['aerial'], ['images/crags-trail/crags-trail.webp', 'images/crags-trail/crags-trail-2.webp'], 'Hard', 'uphill', 'hUl2ifJLims?si=Z2nFN-MfyyKOQbFi'
+)
+
+const cloudsRest = new Trail(
+  'Clouds Rest', {lat: 37.76892878987193, long: -119.48892276139284}, 13.5, 500, 3152, ['aerial'], ['images/clouds-rest/clouds-rest.webp', 'images/clouds-rest/clouds-rest-2.webp'], 'Hard', 'uphill', 'tY2kmikEJZg?si=MYHf4TZdApn8q-4Z'
+)
+
+const mountBaldy = new Trail(
+  'Mount Baldy', {lat: 34.26640459398345, long: -117.62685381314479}, 11, 420, 3990, ['aerial'], ['images/mount-baldy/mount-baldy.webp', 'images/mount-baldy/mount-baldy-2.webp'], 'Hard', 'uphill', 'K_EYGrojE8w?si=HaY0FwJ0xqHVnWJi'
+)
+
+const telescopePeak = new Trail(
+  'Telescope Peak', {lat: 36.171401788840846, long: -117.08956594215147}, 12.2, 460, 3244, ['aerial'], ['images/telescope-peak/telescope-peak.webp','images/telescope-peak/telescope-peak-2.webp'], 'Hard', 'uphill', 'l4TfIjJmSho?si=GwNlKImIERZBZmxA'
+)
+
+const whiteMountain = new Trail(
+  'White Mountain', {lat: 37.635135466416585, long: -118.25546025045857}, 15.2, 480, 3425, ['aerial'], ['images/white-mountain/white-mountain.webp', 'images/white-mountain/white-mountain-2.webp'], 'Hard', 'uphill', 'i_OuaTfL8fg?si=stRwKxhuk3Hhf_V8'
+)
+
+const halfDome = new Trail(
+  'Half Dome', {lat: 37.74720641802438, long: -119.53285609214268}, 16.5, 500, 5305, ['aerial'], ['images/half-dome/half-dome.webp','images/half-dome/half-dome-2.webp'], 'Hard', 'uphill', 'N4Gw4baD63o?si=HBxFxDY1tWhV1cLx'
+)
+
+
+//WHY WON'T MOUNT WHITNEY SHOW UP IN THE SEARCH!?!?!!?
+
+const mountWhitney = new Trail(
+  'Mount Whitney', {lat: 36.57694711294313, long: -118.29701480861813}, 7, 660, 6663, ['aerial', 'landmark'], ['images/mount-whitney/mount-whitney.webp', 'images/mount-whitney/mount-whitney-2.webp'], 'Hard', 'uphill', 'U0Cd8jbj5zg?si=-6habRgz7pKWUtoM'
+)
+
+
+
+
 
 // water
 
@@ -182,6 +288,42 @@ const peanutLake = new Trail(
 const wildMustardLoop = new Trail(
   'Wild Mustard Loop', {lat: 34.09130495440742, long: -118.19352931712376}, 2.3, 30, 505, ['water'], ['images/wild-mustard/wild-mustard.webp'], 'Easy', 'flat', 'z93MlXtZBNs?si=h_Do0vWvt6Mv8Ta2'
 )
+
+const eagleLake = new Trail(
+  'Eagle Lake', {lat: 38.949054756723974, long: -120.11656701685457}, 1.8, 57, 429, ['water'], ['images/eagle-lake/eagle-lake.webp', 'images/eagle-lake/eagle-lake-2.webp'], 'Medium', 'flat', 'Hb-4_Y3oy60?si=0fk5dcGS1uOWE7xG'
+)
+
+const rubiconTrail = new Trail(
+  'Rubicon Trail', {lat: 38.98047574362248, long: -120.09644835104072}, 18.2, 200, 2080, ['water'], ['images/rubicon-trail/rubicon-trail.webp', 'images/rubicon-trail/rubicon-trail-2.webp'], 'Hard', 'flat', 'BPCKS5S2lnQ?si=z6T0SpqjGcCxm3hd'
+)
+
+const littleLakesValley = new Trail(
+  'Little Lakes Valley', {lat: 37.450682082878316, long: -118.73809471916091}, 7.2, 188, 1033, ['water'], ['images/little-lakes-valley/little-lakes-valley.webp', 'images/little-lakes-valley/little-lakes-valley-2.webp'], 'Medium', 'flat', 'g6DAfefk9vw?si=4Fo2Ex_heLSPdy8N'
+)
+
+const bigPineLakes = new Trail(
+  'Big Pine Lakes', {lat: 37.131581323727666, long: -118.50701692117455}, 15.4, 516, 3986, ['water'], ['images/big-pine-lakes/big-pine-lakes.webp', 'images/big-pine-lakes/big-pine-lakes-2.webp'], 'Hard', 'uphill', 'XT6nUMr8PJY?si=Um6svFJ_RkQ0DTxd'
+)
+
+
+
+
+
+
+// Forest
+
+const fernCanyon = new Trail(
+  'Fern Canyon', {lat: 41.429452426202715, long: -124.07114639490095}, 1.1, 30, 127, ['forest'], ['images/fern-canyon/fern-canyon.webp', 'images/fern-canyon/fern-canyon-2.webp'], 'Easy', 'flat', 'SkH5WKHgklI?si=1z7mxnnc0kfTblue'
+)
+
+
+// Sand Dunes
+
+const kelsoDunes = new Trail(
+  'Kelso Dunes', {lat: 34.912367923060565, long: -115.73136661495643}, 2.9, 80, 479, ['dunes'], ['images/kelso-dunes/kelso-dunes.webp', 'images/kelso-dunes/kelso-dunes-2.webp'], 'Medium', 'flat', '20jXHfDe5j0?si=feBp5U9_hvQpX0ea'
+)
+
+
 
 
 const allTrails = Trail.getAllTrails();

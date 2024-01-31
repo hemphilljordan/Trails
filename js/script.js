@@ -21,8 +21,7 @@ if(getTrail){
 
 let currentLocation = {lat: 0, long: 0}
 let showInfo = false
-
-
+let sortedLocations = []
 
 
 
@@ -44,7 +43,10 @@ searchZipButton.addEventListener('click', () => {
     .then(result => {
       currentLocation.lat = result.lat;
       currentLocation.long = result.lng;
-      showFilteredTrails(sortLocationsByDistance(allTrails, result.lat, result.lng))
+      sortedLocations = sortLocationsByDistance(allTrails, result.lat, result.lng)
+      showFilteredTrails(sortedLocations)
+      const trailsJSON = JSON.stringify(sortedLocations);
+      sessionStorage.setItem('sortedTrails', trailsJSON);
     })
   }
 })
@@ -57,7 +59,12 @@ sidebarZipButton.addEventListener('click', () => {
     showErrorMessage()
   } else {
     getLatWithZipcode(inputValue)
-    .then(result => showFilteredTrails(sortLocationsByDistance(filterTrails(), result.lat, result.lng)))
+    .then(result => {
+      sortedLocations = sortLocationsByDistance(filterTrails(), result.lat, result.lng)
+      showFilteredTrails(sortedLocations)
+      currentLocation = {lat: result.lat, long: result.lng}
+      console.log(currentLocation)
+    })
     sidebarZipcodeInput.value = ''
   }
 })
@@ -115,7 +122,13 @@ function showMap(zipcode, trailArray, lat, long) {
         // Event listener for mouseover
         marker.addListener('mouseover', () => {
           infowindow.open(map, marker);
+          const trailDiv = document.getElementById(currMarker.name)
+          trailDiv.scrollIntoView({
+            behavior: 'auto', 
+            block: 'start',
+            inline: 'nearest'
         });
+      })
 
         // Event listener for mouseout
         marker.addListener('mouseout', () => {
@@ -181,7 +194,7 @@ function showFilteredTrails(array) {
   array.forEach((trail) => {
     const trailDiv = document.createElement('div')
     trailDiv.innerHTML = `
-    <div class="filter-result">
+    <div class="filter-result" id="${trail.name}">
     <div class="image-div">
     <img src="${trail.photo[0]}" alt="" class="the-image">
     </div>
@@ -270,7 +283,7 @@ const chosenFilters = {
   length: 20,
   difficulty: null,
   ascend: null,
-  sort: 'long'
+  sort: null
 }
 
 // Length Tab Slider
@@ -284,7 +297,7 @@ lengthSlider.oninput = (() => {
     chosenLength.textContent = '20+'
   } else {
     chosenLength.textContent = value
-    chosenFilters.length = value
+    chosenFilters.length = Number(value)
   }
 });
 function resetSlider(){
@@ -328,6 +341,7 @@ document.getElementById('apply-sort').addEventListener('click', () => {
 })
 
 function getTrailsOrError(filter){
+  console.log(chosenFilters)
   if(filterTrails() < 1 || filter === 'clear'){
     const errorMessage = document.getElementById(`${filter}-error`)
     errorMessage.style.display = 'block'
@@ -336,7 +350,10 @@ function getTrailsOrError(filter){
     }, 1000)
   } else { 
     let sortedTrails;
-    if(chosenFilters.sort === 'short'){
+    if(currentLocation.lat !== 0 && chosenFilters.sort === null){
+      sortedTrails = sortLocationsByDistance(filterTrails(), currentLocation.lat, currentLocation.long)
+      console.log(sortedTrails)
+    } else if(chosenFilters.sort === 'short'){
       sortedTrails = filterTrails().sort((a,b) => a.length - b.length)
     } else{
       sortedTrails = filterTrails().sort((a,b) => b.length - a.length)
@@ -374,7 +391,7 @@ function clearSelections(filterName){
     chosenFilters.length = 20,
     chosenFilters.difficulty = null,
     chosenFilters.ascend = null,
-    chosenFilters.sort = 'long'
+    chosenFilters.sort = null,
     resetSlider()
 
     Object.keys(chosenFilters).forEach(filter => {
@@ -489,3 +506,4 @@ async function getLatWithZipcode(zipCode) {
 // when zipcode is entered, arrange trails in order of closest
 
 
+// sorting by longest/shortest.....how do i organize this with the location sorting??

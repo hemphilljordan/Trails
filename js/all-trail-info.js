@@ -268,11 +268,8 @@ const halfDome = new Trail(
   'Half Dome', {lat: 37.74720641802438, long: -119.53285609214268}, 16.5, 500, 5305, ['aerial'], ['images/half-dome/half-dome.webp','images/half-dome/half-dome-2.webp'], 'Hard', 'uphill', 'N4Gw4baD63o?si=HBxFxDY1tWhV1cLx'
 )
 
-
-//WHY WON'T MOUNT WHITNEY SHOW UP IN THE SEARCH!?!?!!?
-
 const mountWhitney = new Trail(
-  'Mount Whitney', {lat: 36.57694711294313, long: -118.29701480861813}, 7, 660, 6663, ['aerial', 'landmark'], ['images/mount-whitney/mount-whitney.webp', 'images/mount-whitney/mount-whitney-2.webp'], 'Hard', 'uphill', 'U0Cd8jbj5zg?si=-6habRgz7pKWUtoM'
+  'Mount Whitney', {lat: 36.57694711294313, long: -118.29701480861813}, 21.5, 660, 6663, ['aerial', 'landmark'], ['images/mount-whitney/mount-whitney.webp', 'images/mount-whitney/mount-whitney-2.webp'], 'Hard', 'uphill', 'U0Cd8jbj5zg?si=-6habRgz7pKWUtoM'
 )
 
 
@@ -326,5 +323,136 @@ const kelsoDunes = new Trail(
 
 
 
+
+
+// COLORADO
+
+
+
+
+
 const allTrails = Trail.getAllTrails();
+
+
+
+// Lake/Water
+
+const emeraldLake = new Trail(
+  'Emerald Lake', {lat: 40.310928396668395, long: -105.66835999583135}, 3.2, 99, 702, ['water'], ['images/colorado/emerald-lake-trail/emerald-lake-trail.webp', 'images/colorado/emerald-lake-trail/emerald-lake-trail-2.webp'], 'Medium', 'flat', 'wDBLADG21yE?si=sDaSkR3M2C3avEC9'
+)
+
+const skyPond = new Trail(
+  'Sky Pond', {lat: 40.284018692354515, long: -105.66518240329889}, 8.6, 300, 1771, ['water'], ['images/Colorado/sky-pond/sky-pond.webp', 'images/Colorado/sky-pond/sky-pond-2.webp'], 'Hard', 'uphill', 'VEICFyjD2A8?si=42LefiW03PJxxIrZ'
+)
+
+const sainyMarysGlacier = new Trail(
+  "Saint Mary's Glacier", {lat: 39.82726952268465, long: -105.64336820332066}, 1.6, 45, 528, ['water'], ['images/Colorado/st-mary-glacier/st-mary-glacier.webp', 'images/Colorado/st-mary-glacier/st-mary-glacier-2.webp'], 'Medium', 'flat', 'wYZ17t4hVvA?si=zYwHZm3gIJBOt9gK'
+)
+
+const lostLake = new Trail(
+  'Lost Lake', {lat: 39.9517079617167, long: -105.59492871865791}, 4, 120, 830, ['water'], ['images/Colorado/lost-lake/lost-lake.webp', 'images/Colorado/lost-lake/lost-lake-2.webp'], 'Medium', 'flat', 'tft36n5bKck?si=lBVFo2rNiVNw0fi1'
+)
+
+const lakeHaiyaha = new Trail(
+  'Lake Haiyaha', {lat: 40.3040824141119, long: -105.66090412449813}, 4, 122, 846, ['water'], ['images/Colorado/lake-haiyaha/lake-haiyaha.webp', 'images/Colorado/lake-haiyaha/lake-haiyaha-2.webp'], 'Medium', 'flat', 'opt27GyQdNQ?si=EaVSuU9Gjb2R-tKt'
+)
+
+
+
+
+// Aerial
+
+const royalArchTrail = new Trail(
+  'Royal Arch Trail', {lat: 39.99896972124403, long: -105.28281880493498}, 3.3, 93, 1404, ['aerial'], ['images/Colorado/royal-arch-trail/royal-arch-trail.webp', 'images/Colorado/royal-arch-trail/royal-arch-trail-2.webp'], 'Hard', 'uphill', 'CafAs8uLNaw?si=OMqaDefKesOSLZpb'
+)
+
+const mountBierstadt = new Trail(
+  'Mount Bierstadt', {lat: 39.5843505241372, long: -105.66810032529817}, 7.2, 280, 2736, ['aerial'], ['images/Colorado/mount-bierstadt/mount-bierstadt.webp', 'images/Colorado/mount-bierstadt/mount-bierstadt-2.webp'], 'Hard', 'uphill', 'ya9hvAxE7OM?si=MnlFjCJwOjpQzHNm'
+)
+
+const manitouIncline = new Trail(
+  'Manitou Incline', {lat: 38.857006539403386, long: -104.93223760862823}, 4, 194, 1978, ['aerial'], ['images/Colorado/manitou-incline/manitou-incline.webp', 'images/Colorado/manitou-incline/manitou-incline-2.webp'], 'Hard', 'uphill', 'hIK8-ZoP48Y?si=ctBLY8Wi3ZzmHlSg'
+)
+
+const chavezBeaverBrook = new Trail(
+  'Chavez and Beaver Brook', {lat: 39.71710896797224, long: -105.31544533216169}, 5, 200, 1122, ['aerial'], ['images/Colorado/beaver-brook/beaver-brook.webp', 'images/Colorado/beaver-brook/beaver-brook-2.webp'], 'Medium', 'uphill', 'KepEF2y7pVo?si=afKoJKOqRCTkc0SV'
+)
+
+const quandaryPeak = new Trail(
+  'Quandary Peak', {lat: 39.385688998373304, long: -106.0618896914187}, 6.3, 320, 3333, ['aerial'], ['images/Colorado/quandary-peak/quandary-peak.webp', 'images/Colorado/quandary-peak/quandary-peak-2.webp'], 'Hard', 'uphill', 'CfoYveHtlbo?si=qO3_GhLI4h4bkOom'
+)
+
+
+
+// Sand Dunes
+
+const highDune = new Trail(
+  'High Dune', {lat: 37.805111916677305, long: -105.59335054526835}, 3, 120, 603, ['dunes'], ['images/Colorado/high-dune/high-dune.webp', 'images/Colorado/high-dune/high-dune-2.webp'], 'Hard', 'uphill', 'BeT11PMI9Co?si=FoY370mJEQ7VHIG3'
+)
+
+
+
+
+
+// UTAH
+
+
+// aerial
+
+const angelsLanding = new Trail(
+  'Angels Landing', {lat: 37.259405015476055, long: -112.95128236111067}, 4.3, 130, 1827, ['aerial'], ['images/Utah/angels-landing/angels-landing.webp', 'images/Utah/angels-landing/angels-landing-2.webp'], 'Hard', 'uphill', 'jRUAx4XsLXY?si=oCjv6X7NLr1GhTp4'
+)
+
+const navajoLoop = new Trail(
+  'Navajo Loop', {lat: 37.62088661334968, long: -112.16373851691549}, 1.5, 58, 515, ['aerial'], ['images/Utah/navajo-loop/navajo-loop.webp', 'images/Utah/navajo-loop/navajo-loop-2.webp'], 'Medium', 'uphill', 'dfknvXjylVU?si=ZMpmYmvXBeHaVSOi'
+)
+
+const delicateArch = new Trail(
+  'Delicate Arch', {lat: 38.74056603410675, long: -109.5098853322074}, 3.2, 95, 629, ['landmark'], ['images/Utah/delicate-arch/delicate-arch.webp', 'images/Utah/delicate-arch/delicate-arch-2.webp'], 'Medium', 'uphill', 'GHCJAAfvmLM?si=O6ktRjGi0buIEUUs'
+)
+
+const scoutLookout = new Trail(
+  'Scout Lookout', {lat: 37.274983219271824, long: -112.9504766727522}, 3.6, 133, 1115, ['aerial'], ['images/Utah/scout-lookout/scout-lookout.webp', 'images/Utah/scout-lookout/scout-lookout-2.webp'], 'Hard', 'uphill', 'dZ0tSgtBifc?si=32JjhmfcpcuAUOXf'
+)
+
+const watchman = new Trail(
+  'The Watchman', {lat: 37.20159080538731, long: -112.98644706111334}, 3.1, 93, 636, ['aerial'], ['images/Utah/watchman/watchman.webp', 'images/Utah/watchman/watchman-2.webp'], 'Medium', 'flat', '7BvF8NzInBM?si=OpP0Hl8zjM2w61Oc'
+)
+
+const queensGarden = new Trail(
+  'Queens Garden', {lat: 37.62400851486241, long: -112.16064020342267}, 3.2, 95, 643, ['aerial', 'rocks'], ['images/Utah/queens-garden/queens-garden.webp', 'images/Utah/queens-garden/queens-garden-2.webp'], 'Medium', 'flat', '33ZLG2J2NkY?si=qpg8PHnbQUbpwlsg' 
+)
+
+
+
+
+
+
+
+// water/lakes
+
+const lakeBlanche = new Trail(
+  'Lake Blanche', {lat: 40.633031052074074, long: -111.72299356445133}, 7, 300, 2811, ['water', 'aerial'], ['images/Utah/lake-blanche/lake-blanche-4.jpeg', 'images/Utah/lake-blanche/lake-blanche-2.webp', 'images/Utah/lake-blanche/lake-blanche.webp', 'images/Utah/lake-blanche/lake-blanche-3.webp'], 'Hard', 'uphill', 'BLci9D_0exI?si=jHCRQQXuE6H9sbOB'
+)
+
+
+
+// waterfalls
+
+const lowerFalls = new Trail(
+  'Lower Falls', {lat: 40.565367777384, long: -111.7879647860919}, 4.8, 150, 1515, ['waterfalls', 'water'], ['images/Utah/lower-falls/lower-falls.webp', 'images/Utah/lower-falls/lower-falls-2.webp'], 'Medium', 'flat', 'mgyXuXwIR5E?si=GHOEueXobC2MHp55'
+)
+
+
+
+// rocks
+
+const devilsGarden = new Trail(
+  "Devil's Garden", {lat: 38.78309303103175, long: -109.59495113562848}, 7.9, 370, 1085, ['rocks'], ['images/Utah/devils-garden/devils-garden.webp', 'images/Utah/devils-garden/devils-garden-2.webp'], 'Hard', 'uphill', 'KM1du0oZH2M?si=ivmTt6RupDNNfIZL'
+)
+
+const fairyland = new Trail(
+  'Fairyland Loop', {lat: 37.63582069735726, long: -112.14921806109366}, 7.9, 240, 1555, ['rocks', 'aerial'], ['images/Utah/fairyland/fairyland.webp', 'images/Utah/fairyland/fairyland-2.webp'], 'Medium', 'uphill', 'NZHfvYCauUQ?si=omNWeSCBE9h09cpi'
+)
+
 
